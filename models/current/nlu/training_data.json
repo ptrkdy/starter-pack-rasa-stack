@@ -2,6 +2,38 @@
   "rasa_nlu_data": {
     "common_examples": [
       {
+        "intent": "buy_insurance",
+        "text": "Buy"
+      },
+      {
+        "intent": "buy_insurance",
+        "text": "Purchase"
+      },
+      {
+        "intent": "buy_insurance",
+        "text": "General Liability"
+      },
+      {
+        "intent": "buy_insurance",
+        "text": "Buy insurance"
+      },
+      {
+        "intent": "buy_insurance",
+        "text": "I want to buy insurance"
+      },
+      {
+        "intent": "buy_insurance",
+        "text": "I want to purchase general liability"
+      },
+      {
+        "intent": "buy_insurance",
+        "text": "cyber insurance"
+      },
+      {
+        "intent": "buy_insurance",
+        "text": "lets build a chatbot"
+      },
+      {
         "intent": "goodbye",
         "text": "Bye"
       },

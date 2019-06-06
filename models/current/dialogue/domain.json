@@ -1,5 +1,6 @@
 {
   "states": [
+    "intent_buy_insurance",
     "intent_deny",
     "intent_goodbye",
     "intent_greet",
@@ -19,6 +20,7 @@
     "prev_utter_thanks",
     "prev_utter_greet",
     "prev_utter_goodbye",
-    "prev_action_joke"
+    "prev_action_joke",
+    "prev_utter_buy_insurance"
   ]
 }

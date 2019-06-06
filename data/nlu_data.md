@@ -1,5 +1,15 @@
 <!--- Make sure to update this training data file with more training examples from https://forum.rasa.com/t/rasa-starter-pack/704 --> 
 
+## intent:buy_insurance
+- Buy 		
+- Purchase
+- General Liability
+- Buy insurance
+- I want to buy insurance
+- I want to purchase general liability
+- cyber insurance
+- lets build a chatbot
+
 ## intent:goodbye <!--- The label of the intent --> 
 - Bye 			<!--- Training examples for intent 'bye'--> 
 - Goodbye

@@ -6,6 +6,7 @@ actions:
 - utter_greet
 - utter_goodbye
 - action_joke
+- utter_buy_insurance
 config:
   store_entities_as_slots: true
 entities:
@@ -24,12 +25,16 @@ intents:
     use_entities: true
 - name:
     use_entities: true
+- buy_insurance:
+    use_entities: true
 slots:
   name:
     auto_fill: true
     initial_value: null
     type: rasa_core.slots.TextSlot
 templates:
+  utter_buy_insurance:
+  - text: Thanks, I am here to sell insurance
   utter_goodbye:
   - text: Talk to you later!
   utter_greet:

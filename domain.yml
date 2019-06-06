@@ -5,7 +5,7 @@ intents:
 - deny
 - joke
 - name
-
+- buy_insurance
 
 entities:
 - name
@@ -22,6 +22,7 @@ actions:
 - utter_greet
 - utter_goodbye
 - action_joke
+- utter_buy_insurance
 
 
 templates:
@@ -37,3 +38,6 @@ templates:
   utter_thanks:
   - text: "My pleasure."
   
+  utter_buy_insurance:
+  - text: "Thanks, I am here to sell insurance"
+
