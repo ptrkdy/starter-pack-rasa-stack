@@ -17,7 +17,7 @@
 ## story_buy_insurance
 * buy_insurance
  - utter_buy_insurance
- #- utter_provide_address
+ - classify_insurance
  
 
 ## story_joke_01

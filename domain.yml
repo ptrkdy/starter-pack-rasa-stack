@@ -23,6 +23,7 @@ actions:
 - utter_goodbye
 - action_joke
 - utter_buy_insurance
+- classify_insurance
 
 
 templates:

@@ -7,6 +7,7 @@ actions:
 - utter_goodbye
 - action_joke
 - utter_buy_insurance
+- classify_insurance
 config:
   store_entities_as_slots: true
 entities:
