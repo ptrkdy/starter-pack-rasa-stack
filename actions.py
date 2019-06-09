@@ -4,6 +4,7 @@ from __future__ import division
 from __future__ import print_function
 from __future__ import unicode_literals
 
+import time
 import logging
 import requests
 import json
@@ -36,6 +37,7 @@ class ActionClassifyInsurance(Action):
     def run(self, dispatcher, tracker, domain):
         # what your action should do
         xaa = "Classify Insurance"
+        time.sleep(3)
         dispatcher.utter_message(xaa)
         return print(xaa)
 
@@ -55,7 +57,7 @@ class ActionFetchInsurancePolicyQuestions(Action):
         return []
 
 class ActionStateChecker(Action):
-    def name(self)
+    def name(self):
         # define the name of the action
         return "state_checker"
 
