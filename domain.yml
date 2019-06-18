@@ -6,6 +6,18 @@ intents:
 - joke
 - name
 - buy_insurance
+- request_restaurant
+- request_hotel
+- inform
+- request_info
+- about
+- affirm
+- deny
+- correct
+- chitchat
+- explain
+- did_that_work
+- goodbye
 
 entities:
 - name
@@ -45,12 +57,12 @@ slots:
     type: unfeaturized
   breakfast:
     type: unfeaturized
-  # active_plan:
-    # type: bool
+  active_plan:
+    type: bool
   plan_complete:
     type: bool
-  # switch:
-    # type: bool
+  switch:
+    type: bool
 
 
 
@@ -64,6 +76,9 @@ actions:
 - action_joke
 - utter_buy_insurance
 - classify_insurance
+- activate_restaurant
+- deactivate_plan
+- activate_hotel
 
 
 templates:
@@ -82,12 +97,6 @@ templates:
   utter_buy_insurance:
   - text: "Thanks, I am here to sell insurance"
 
-  utter_chitchat:
-  - text: "chit chat..."
-  
-  utter_happy:
-  - text: "I am happy"
-
   utter_ask_color:
   - text: "what color would you like?"
     buttons:
@@ -95,3 +104,90 @@ templates:
       payload: '/choose{"color": "blue"}'
     - title: "red"
       payload: '/choose{"color": "red"}'
+
+  utter_book_restaurant:
+    - "Booked! Bon appetit!"
+  utter_book_hotel:
+    - "Booked! Have a great trip!"
+  utter_ask_cuisine:
+    - "What kind of cuisine would you like?"
+  utter_ask_people:
+    - "How many people will you be?"
+  utter_ask_location:
+    - "Where?"
+  utter_ask_price:
+    - "What price range?"
+  utter_ask_startdate:
+    - "When should your hotel stay start?"
+  utter_ask_enddate:
+    - "When should your hotel stay end?"
+  utter_search:
+    - "I'm looking for restaurants"
+  utter_finish:
+    - "Ok, I have everything I need now."
+  utter_suggest_restaurant:
+    - "Here is what I found: [papi's pizza place]. Does that work?"
+  utter_suggest_hotel:
+    - "Here is what I found: [real cool hotel for people who love pizza]. Does that work?"
+  utter_happy:
+    - "Great! Let's talk about it later."
+  utter_chitchat:
+    - "Bla bla"
+  utter_filled_slots:
+    - "Ok, I have all the information I need now."
+  utter_ask_details:
+    - "Anything specific?"
+  utter_explain_details_hotel:
+    - "I need some details on your trip to find a suitable hotel"
+  utter_explain_details_restaurant:
+    - "I need some details to find you a suitable place to eat"
+  utter_explain_startdate_hotel:
+    - "I'll need to know when you want to go to check availability."
+  utter_explain_enddate_hotel:
+    - "I need to know when you'll check out"
+  utter_explain_location_hotel:
+    - "To show you relevant results, I'll have to know where you are going"
+  utter_explain_location_restaurant:
+    - "To show you relevant results, I'll have to know what city we're looking in."
+  utter_explain_people_hotel:
+    - "I'll need to know how many of you there are to check which rooms are suitable."
+  utter_explain_people_restaurant:
+    - "I'll need to know how many of you there are to check if a table is available."
+  utter_explain_price_hotel:
+    - "Knowing an approximate price range lets me narrow down search results."
+  utter_explain_price_restaurant:
+    - "Knowing an approximate price range lets me narrow down search results."
+  utter_explain_cuisine_restaurant:
+    - "Knowing which cuisine you want will help me narrow down the results."
+  utter_correct_price_hotel:
+    - "Ok, I've changed the price to {price}"
+  utter_correct_price_restaurant:
+    - "Ok, I've changed the price to {price}"
+  utter_correct_people_hotel:
+    - "Ok, I've changed the number of people to {people}"
+  utter_correct_people_restaurant:
+    - "Ok, I've changed the number of people to {people}"
+  utter_correct_cuisine_restaurant:
+    - "Ok, I've changed the cuisine to {cuisine}"
+  utter_correct_location_hotel:
+    - "Ok, I've changed the location to {location}"
+  utter_correct_location_restaurant:
+    - "Ok, I've changed the location to {location}"
+  utter_correct_enddate_hotel:
+    - "Ok, I've changed your checkout date to {enddate}"
+  utter_correct_startdate_hotel:
+    - "Ok, I've changed your check in date to {startdate}"
+  utter_worked_hotel:
+    - "Yes, based on the info you gave me I recommend these hotels:"
+  utter_worked_restaurant:
+    - "Yes, based on the info you gave me I recommend these restaurants:"
+  utter_more_info_hotel:
+    - "No, I still need some more information from you to find a hotel."
+  utter_more_info_restaurant:
+    - "No, I still need some more information from you to find a restaurant."
+  utter_ask_has_gym:
+    - "Do you need the hotel to have a gym?"
+  utter_ask_has_spa:
+    - "Do you want the hotel to have a spa?"
+  utter_human_hand_off:
+    - "Ok, I think we're having issues. I will forward you to a customer service agent"

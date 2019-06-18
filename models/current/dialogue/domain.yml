@@ -5,9 +5,14 @@ actions:
 - utter_thanks
 - utter_greet
 - utter_goodbye
+- utter_chitchat
+- utter_happy
 - action_joke
 - utter_buy_insurance
 - classify_insurance
+- activate_restaurant
+- deactivate_plan
+- activate_hotel
 config:
   store_entities_as_slots: true
 entities:
@@ -28,18 +33,111 @@ intents:
     use_entities: true
 - buy_insurance:
     use_entities: true
+- request_restaurant:
+    use_entities: true
+- chitchat:
+    use_entities: true
+- request_hotel:
+    use_entities: true
 slots:
+  active_plan:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.BooleanSlot
+  breakfast:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  cuisine:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  date_suitable:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  enddate:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  has_gym:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  has_spa:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  hotel:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  info:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  location:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
   name:
     auto_fill: true
     initial_value: null
     type: rasa_core.slots.TextSlot
+  outdoor_seating:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  people:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  plan_complete:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.BooleanSlot
+  price:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  requested_slot:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  reservations:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  restaurant:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  startdate:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  switch:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.BooleanSlot
 templates:
+  utter_ask_color:
+  - buttons:
+    - payload: '/choose{"color": "blue"}'
+      title: blue
+    - payload: '/choose{"color": "red"}'
+      title: red
+    text: what color would you like?
   utter_buy_insurance:
   - text: Thanks, I am here to sell insurance
+  utter_chitchat:
+  - text: chit chat...
   utter_goodbye:
   - text: Talk to you later!
   utter_greet:
   - text: Nice to you meet you {name}. How can I help?
+  utter_happy:
+  - text: I am happy
   utter_name:
   - text: Hey there! Tell me your name.
   utter_thanks:

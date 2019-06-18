@@ -5,22 +5,38 @@
         "name"
       ]
     },
-    "classify_insurance": {
-      "slots": []
-    },
-    "utter_goodbye": {
-      "slots": []
-    },
     "utter_name": {
       "slots": []
     },
-    "action_joke": {
+    "activate_restaurant": {
+      "slots": [
+        "active_plan",
+        "switch",
+        "cuisine"
+      ]
+    },
+    "deactivate_plan": {
+      "slots": [
+        "active_plan",
+        "plan_complete"
+      ]
+    },
+    "activate_hotel": {
       "slots": []
     },
     "utter_thanks": {
       "slots": []
     },
+    "action_joke": {
+      "slots": []
+    },
+    "utter_goodbye": {
+      "slots": []
+    },
     "utter_greet": {
+      "slots": []
+    },
+    "classify_insurance": {
       "slots": []
     }
   },
@@ -38,7 +54,7 @@
     "rasa_core.policies.memoization.MemoizationPolicy",
     "rasa_core.policies.form_policy.FormPolicy"
   ],
-  "trained_at": "20190615-170940",
+  "trained_at": "20190618-190628",
   "rasa_core": "0.13.8",
   "tensorflow": "1.12.0",
   "sklearn": "0.20.2"

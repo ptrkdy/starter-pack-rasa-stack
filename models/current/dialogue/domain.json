@@ -1,14 +1,25 @@
 {
   "states": [
     "intent_buy_insurance",
+    "intent_chitchat",
     "intent_deny",
     "intent_goodbye",
     "intent_greet",
     "intent_joke",
     "intent_name",
+    "intent_request_hotel",
+    "intent_request_restaurant",
     "intent_thanks",
     "entity_name",
+    "slot_active_plan_0",
+    "slot_active_plan_1",
+    "slot_hotel_0",
     "slot_name_0",
+    "slot_plan_complete_0",
+    "slot_plan_complete_1",
+    "slot_restaurant_0",
+    "slot_switch_0",
+    "slot_switch_1",
     "prev_action_listen",
     "prev_action_restart",
     "prev_action_default_fallback",
@@ -20,8 +31,13 @@
     "prev_utter_thanks",
     "prev_utter_greet",
     "prev_utter_goodbye",
+    "prev_utter_chitchat",
+    "prev_utter_happy",
     "prev_action_joke",
     "prev_utter_buy_insurance",
-    "prev_classify_insurance"
+    "prev_classify_insurance",
+    "prev_activate_restaurant",
+    "prev_deactivate_plan",
+    "prev_activate_hotel"
   ]
 }
