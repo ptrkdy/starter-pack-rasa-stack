@@ -10,10 +10,48 @@ intents:
 entities:
 - name
 
-
 slots:
   name:
     type: text
+  requested_slot:
+    type: unfeaturized
+  cuisine:
+    type: unfeaturized
+  people:
+    type: unfeaturized
+  location:
+    type: unfeaturized
+  price:
+    type: unfeaturized
+  info:
+    type: unfeaturized
+  restaurant:
+    type: text
+  hotel:
+    type: text
+  startdate:
+    type: unfeaturized
+  enddate:
+    type: unfeaturized
+  outdoor_seating:
+    type: unfeaturized
+  reservations:
+    type: unfeaturized
+  date_suitable:
+    type: unfeaturized
+  has_gym:
+    type: unfeaturized
+  has_spa:
+    type: unfeaturized
+  breakfast:
+    type: unfeaturized
+  # active_plan:
+    # type: bool
+  plan_complete:
+    type: bool
+  # switch:
+    # type: bool
+
 
 
 actions:
@@ -21,6 +59,8 @@ actions:
 - utter_thanks
 - utter_greet
 - utter_goodbye
+- utter_chitchat
+- utter_happy
 - action_joke
 - utter_buy_insurance
 - classify_insurance
@@ -42,3 +82,16 @@ templates:
   utter_buy_insurance:
   - text: "Thanks, I am here to sell insurance"
 
+  utter_chitchat:
+  - text: "chit chat..."
+  
+  utter_happy:
+  - text: "I am happy"
+
+  utter_ask_color:
+  - text: "what color would you like?"
+    buttons:
+    - title: "blue"
+      payload: '/choose{"color": "blue"}'
+    - title: "red"
+      payload: '/choose{"color": "red"}'

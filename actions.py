@@ -37,7 +37,7 @@ class ActionClassifyInsurance(Action):
     def run(self, dispatcher, tracker, domain):
         # what your action should do
         xaa = "Classify Insurance"
-        time.sleep(3)
+        time.sleep(1)
         dispatcher.utter_message(xaa)
         return print(xaa)
 
@@ -66,3 +66,28 @@ class ActionStateChecker(Action):
         xaa = []
         # this will support conditional logic to find the next question
         # based on state of the current policy information
+
+
+class ActionRestaurant(FormAction):
+
+    RANDOMIZE = True
+
+    REQUIRED_FIELDS = [
+        EntityFormField("people", "people"),
+        EntityFormField("location", "location"),
+        EntityFormField("price", "price"),
+        EntityFormField("cuisine", "cuisine")
+    ]
+
+    OPTIONAL_FIELDS = [
+        EntityFormField("outdoor_seating", "outdoor_seating"),
+        EntityFormField("reservations", "reservations"),
+        EntityFormField("date_suitable", "date_suitable")
+    ]
+
+    def name(self):
+        return "action_restaurant"
+
+    def submit(self, dispatcher, tracker, domain):
+        dispatcher.utter_template('utter_finish')
+        return []
